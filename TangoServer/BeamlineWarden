@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+if [ -z "$1" ]; then
+    echo "Please supply the server reference name"
+    exit -1
+fi
+
+echo "Starting BeamlineWarden $1"
+python BeamLineWarden.py $1
