@@ -9,4 +9,4 @@ Requires setup for a specific user (i.e. beamline user). It can be started remot
 
 ## Directory structure
 - **crontab_daemon.py** - python executable file collecting data and performing twitter notifications on certain events.
-- **app/config.py** - configuration file for twitter bot. API keys should be placed there.
+- **app/config.py** - configuration file for twitter bot. API keys should be placed there. At the same file one should specify font file used for image

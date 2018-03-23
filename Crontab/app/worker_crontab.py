@@ -3,6 +3,7 @@ __author__ = "Konstantin Glazyrin (lorcat@gmail.com)"
 from app import *
 from app.common import *
 from app.plugins import *
+from app.config import *
 
 class CrontabWorker(MutexLock):
     REF_FILE = __file__
@@ -32,7 +33,7 @@ class CrontabWorker(MutexLock):
     KEY_CURRENT = "BeamCurrent"
     KEY_SERVERS = "servers"
 
-    FONT = "/home/p02user/PycharmProjects/CrontabWarden/app/font/MyriadPro-BoldCond.otf"
+    FONT = FONT_TEXT
 
     def __init__(self, def_file=None, debug_level=None):
         super(CrontabWorker, self).__init__(def_file=def_file, debug_level=debug_level)
