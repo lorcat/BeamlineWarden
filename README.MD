@@ -14,21 +14,21 @@ This way it makes it easier to debug and create new plugins from scratch, also b
 Plugins are started as a part of separate threads. They can share certain common code.
 
 # Configuration
-Main TangoServer configuration is written into TangoServer/app/config.py file.
-Plugins can have their own configuration. The recommended approach is to use TangoServer/app/plugins/plugins_common/ directory for such tasks
+Main TangoServer configuration is written into **TangoServer/app/config.py** file.
+Plugins can have their own configuration. The recommended approach is to use **TangoServer/app/plugins/plugins_common/** directory for such tasks
 
 # Tango configuration
-The server has Start/Stop commands and attributes covering TickTackPeriod and NumThreads
+The server has *Start/Stop* commands and attributes covering *TickTackPeriod* and *NumThreads*
 Plugins are found only upon the initialization process of the TangoServer (can be reimplemented into a command).
 
 # Directory structure
-Plugins are placed inside the TangoServer/app/plugins/ folder
+Plugins are placed inside the **TangoServer/app/plugins/** folder
 
-TangoServer/BeamlineWarden - shell script used to start the TangoServer
-TangoServer/BeamlineWarden.py - implementation of the TangoServer (PyTango)
-TangoServer/BeamlineWarden_daemon.py - simple `daemon` implementation - run until killed, no system signals processed
+**TangoServer/BeamlineWarden** - shell script used to start the TangoServer
+**TangoServer/BeamlineWarden.py** - implementation of the TangoServer (PyTango)
+**TangoServer/BeamlineWarden_daemon.py** - simple `daemon` implementation - run until killed, no system signals processed
 
 # Python Dependencies
-Tango Server: (PyTango)[https://pypi.python.org/pypi/PyTango], (pluginbase)[http://pluginbase.pocoo.org/]
-Plugins: json, plugin_memcached, etc.
+Tango Server: [PyTango](https://pypi.python.org/pypi/PyTango), [pluginbase](http://pluginbase.pocoo.org/)
+Plugins: in addition to Tango Server json, plugin_memcached, etc. - plugin specific.
 
