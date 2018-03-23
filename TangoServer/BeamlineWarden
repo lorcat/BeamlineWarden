@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
 
+cd "/home/tango"
+
 if [ -z "$1" ]; then
-    echo "Please supply the server reference name"
-    exit -1
+	echo "Please supply the server reference name"
+	exit -1
 fi
 
 echo "Starting BeamlineWarden $1"
-python BeamLineWarden.py $1
+python  BeamlineWarden.py $1
