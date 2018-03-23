@@ -3,10 +3,8 @@
 ## Purpose
 Conky puts an overlay window showing current parameters for the display.
 Requires setup for a specific user. It can be started remotely:
-**
-cd $CONKYDIR
-DISPLAY=:0 /usr/bin/conky -d -c $CONKYDIR/co_main &
-**
+**cd $CONKYDIR**
+**DISPLAY=:0 /usr/bin/conky -d -c $CONKYDIR/co_main &**
 
 ## Directory structure
 - **co_main** - configuration file for conky
